@@ -9,11 +9,11 @@ const Banner = () => {
             <h2 className='principal'>Douglas Sousa</h2>
             <div className='sites'>
                 <h2>Github</h2>
-                <img className='produtos' src="/images/download.png"></img>
+                <img className='produtos' src="/images/git.png"></img>
             </div>
             <div className='sites'>
                 <h2>Linkedin</h2>
-                <img className='produtos' src="/images/git.png"></img>
+                <img className='produtos' src="/images/download.png"></img>
             </div>
             <div className='sites'>
                 <h2>Whatsapp</h2>
