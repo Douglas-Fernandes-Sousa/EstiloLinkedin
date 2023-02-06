@@ -11,7 +11,12 @@ export default function (props) {
     return (
         <div className='campo-texto'>
             <label>{props.nome}</label>
-            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={props.placeholder}></input>
+            <input
+                value={props.valor}
+                onChange={aoDigitado}
+                required={props.obrigatorio}
+                placeholder={props.placeholder}
+            ></input>
         </div>
     )
 }

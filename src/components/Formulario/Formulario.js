@@ -9,7 +9,6 @@ export default function (props) {
 
 
     const [curso, setCurso] = useState('')
-    const [empresa, setEmpresa] = useState('')
     const [certificado, setCertificado] = useState('')
     const [escola, setEscola] = useState('')
 
@@ -18,10 +17,12 @@ export default function (props) {
         evento.preventDefault()
         props.aoCursoCadastrado({
             curso,
-            empresa,
             certificado,
             escola
         })
+        setCurso('')
+        setCertificado('')
+        setEscola('')
     }
 
     return (
@@ -33,13 +34,6 @@ export default function (props) {
                     aoAlterado={valor => setCurso(valor)}
                     obrigatorio={true} nome='Curso'
                     placeholder='Digite o novo curso cursado'>
-                </CampoTexto>
-                <CampoTexto
-                    valor={empresa}
-                    aoAlterado={valor => setEmpresa(valor)}
-                    obrigatorio={true}
-                    nome='Empresa'
-                    placeholder='Digite a Empresa prestadora'>
                 </CampoTexto>
                 <CampoTexto
                     valor={certificado}

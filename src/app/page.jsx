@@ -23,7 +23,6 @@ export default function Home() {
 
   const aoNovoCursoAdicionado = (cursoCadastrado) => {
     setCursoFinalizado([...cursoFinalizado, cursoCadastrado])
-    console.log(cursoFinalizado)
   }
   
   return (
@@ -38,7 +37,7 @@ export default function Home() {
       key={escola.nome} escola={escola.nome} 
       corPrimaria={escola.corPrimaria} 
       corSecundaria={escola.corSecundaria}
-      cursoFinalizado={cursoFinalizado}
+      cursoFinalizado={cursoFinalizado.filter(cursoFinalizado => cursoFinalizado.escola === escola.nome)}
       ></Curso>)}
     </div>
   )
